@@ -12,11 +12,6 @@ public abstract class Customer {
     public Customer() {}
 
     public void loadCustomer(int id) {
-        try {
-            Class.forName("org.sqlite.JDBD");
-        }
-        catch (ClassNotFoundException e) {
-        }
 
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:CustomerDatabase.sqlite");
@@ -71,6 +66,7 @@ public abstract class Customer {
 
     int ID;
     String first, last, SSN;
+
 
     public void registerCustomer(int id) {
         try {
