@@ -1,6 +1,6 @@
 package sample;
 
-public class Donor extends Customer{
+public class Donor extends CustomerDecorator{
     Customer c;
     public Donor(Customer c){
         this.c = c;

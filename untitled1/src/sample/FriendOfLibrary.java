@@ -1,6 +1,6 @@
 package sample;
 
-public class FriendOfLibrary extends Customer{
+public class FriendOfLibrary extends CustomerDecorator{
     Customer c;
     public FriendOfLibrary(Customer c){
         this.c = c;
