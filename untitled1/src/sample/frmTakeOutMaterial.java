@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class frmTakeOutMaterial {
     public Pane materialsAvailable;
     public ChoiceBox availableMaterials;
-    public TextField ID;
+    public TextField txtID;
     Controller controller = new Controller();
 
     @FXML
@@ -45,5 +45,7 @@ public class frmTakeOutMaterial {
     }
 
     public void takeOutMaterial(ActionEvent actionEvent) {
+        String id = txtID.getText();
+        Material m = new Book(id);
     }
 }

@@ -1,6 +1,6 @@
 package sample;
 
-public class DVD {
+public class DVD extends Material{
     String movieTitle;
     String director;
 
