@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.beans.Observable;
+
 public class Material {
     public String getTitle() {
         return title;
@@ -16,9 +18,14 @@ public class Material {
 
 
     public Material(){
+
     }
 
     public int getDueDate() {
         return dueDate;
+    }
+
+    public void update(){
+        dueDate += 14; // d
     }
 }

@@ -1,4 +1,6 @@
 package sample;
+import javafx.beans.Observable;
+
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -8,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
 
-public abstract class Customer {
+public abstract class Customer implements Observable{
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -36,6 +38,9 @@ public abstract class Customer {
         }
     }
 
+    public void changeDueDate(){
+        notifyAll();
+    }
 
     public String getFirst() {
         return first;
