@@ -1,5 +1,10 @@
 package sample;
 
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -96,7 +101,13 @@ public class Main extends Application {
         catch (Exception e) {}
 
     }
+        /**
+         * Connect to a sample database
+         */
+
     public static void main(String[] args) {
         launch(args);
+
+
     }
 }

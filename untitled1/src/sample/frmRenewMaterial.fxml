@@ -6,13 +6,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frmRenewMaterial">
+<Pane onDragDetected="#returnToMenu" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frmRenewMaterial">
    <children>
       <TextField layoutX="195.0" layoutY="93.0" />
       <Label layoutX="219.0" layoutY="62.0" prefHeight="16.0" prefWidth="98.0" text="Customer ID" />
       <Button layoutX="248.0" layoutY="135.0" mnemonicParsing="false" text="View Checked Out Items" />
       <Button layoutX="268.0" layoutY="300.0" mnemonicParsing="false" text="Renew" />
       <ChoiceBox layoutX="225.0" layoutY="215.0" prefWidth="150.0" />
+      <Button layoutX="268.0" layoutY="342.0" mnemonicParsing="false" text="Return to Menu" />
    </children>
 </Pane>

@@ -3,17 +3,20 @@ package sample;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
 public class frmTakeOutMaterial {
     public Pane materialsAvailable;
     public ChoiceBox availableMaterials;
-    public TextField txtID;
-    public TextField txtTitle;
+    public TextField ID;
     Controller controller = new Controller();
 
     @FXML
@@ -32,22 +35,30 @@ public class frmTakeOutMaterial {
         void drawScreen(ArrayList<Material> available) {
 
         }
-    }
 
-    class Controller {
-        View view = new View();
+        Stage primaryStage;
 
-        void displayBooks() {
+        void loadGreetScreen() {
+            Main.getInstance().loadGreetScreen();
 
         }
-        void menu(){
+    }
+
+        class Controller {
+
+            View view = new View();
+
+            void displayBooks() {
+
+            }
+
+            void menu() {
+                view.loadGreetScreen();
+
+            }
         }
 
-    }
 
-    public void takeOutMaterial(ActionEvent actionEvent) {
-        String title = txtTitle.getText();
-        Material m = new Book(title);
-        int dueDate = m.getDueDate();
+        public void takeOutMaterial(ActionEvent actionEvent) {
+        }
     }
-}

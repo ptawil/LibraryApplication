@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
 
-public abstract class Customer implements Observable{
+public abstract class Customer{
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -36,10 +36,6 @@ public abstract class Customer implements Observable{
         catch (SQLException a){
             System.out.println(a);
         }
-    }
-
-    public void changeDueDate(){
-        notifyAll();
     }
 
     public String getFirst() {
