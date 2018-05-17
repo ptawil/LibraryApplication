@@ -8,15 +8,15 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frmCreateCustomer">
    <children>
-      <TextField fx:id="txtFirstName" layoutX="219.0" layoutY="69.0" />
-      <TextField fx:id="txtLastName" layoutX="219.0" layoutY="140.0" />
-      <Button layoutX="242.0" layoutY="326.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="54.0" prefWidth="91.0" text="Register " />
-      <Label layoutX="219.0" layoutY="47.0" text="First Name " />
-      <Label layoutX="219.0" layoutY="114.0" text="Last Name " />
-      <Label layoutX="219.0" layoutY="184.0" text="SSN" />
-      <TextField fx:id="txtSSN" layoutX="219.0" layoutY="206.0" />
-      <CheckBox fx:id="regular" layoutX="241.0" layoutY="240.0" mnemonicParsing="false" text="Regular" />
-      <CheckBox fx:id="donor" layoutX="240.0" layoutY="266.0" mnemonicParsing="false" text="Donor " />
-      <CheckBox fx:id="friend" layoutX="240.0" layoutY="292.0" mnemonicParsing="false" text="Friend of Library" />
+      <TextField fx:id="txtFirstName" layoutX="149.0" layoutY="70.0" />
+      <TextField fx:id="txtLastName" layoutX="149.0" layoutY="141.0" />
+      <Button layoutX="174.0" layoutY="325.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="54.0" prefWidth="91.0" text="Register " />
+      <Label layoutX="149.0" layoutY="46.0" text="First Name " />
+      <Label layoutX="150.0" layoutY="117.0" text="Last Name " />
+      <Label layoutX="150.0" layoutY="183.0" text="SSN" />
+      <TextField fx:id="txtSSN" layoutX="149.0" layoutY="207.0" />
+      <CheckBox fx:id="regular" layoutX="149.0" layoutY="242.0" mnemonicParsing="false" text="Regular" />
+      <CheckBox fx:id="donor" layoutX="151.0" layoutY="267.0" mnemonicParsing="false" text="Donor " />
+      <CheckBox fx:id="friend" layoutX="149.0" layoutY="291.0" mnemonicParsing="false" text="Friend of Library" />
    </children>
 </Pane>
