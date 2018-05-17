@@ -89,6 +89,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="300">
               <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
 =======
@@ -100,6 +101,11 @@
 >>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
               <folding />
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
+=======
+            <state relative-caret-position="67">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
             </state>
           </provider>
         </entry>
@@ -107,6 +113,7 @@
       <file leaf-file-name="frmTakeOutMaterial.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/frmTakeOutMaterial.fxml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="181">
@@ -118,10 +125,19 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
             </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="Material.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Material.java">
@@ -159,10 +175,22 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+=======
+      <file leaf-file-name="frmRenewMaterial.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/frmRenewMaterial.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="materials" pinned="false" current-in-tab="false">
         <entry file="das://4cc7f7f8-ed76-4b97-9c49-1461eadd0eba/schema/main/table/materials">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -184,6 +212,16 @@
             <state relative-caret-position="255">
               <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -192,17 +230,26 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="frmRenewMaterial.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/frmRenewMaterial.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Book.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
               <folding />
             </state>
           </provider>
 <<<<<<< HEAD
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <file leaf-file-name="RegularCustomer.java" pinned="false" current-in-tab="false">
@@ -210,11 +257,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+=======
+      <file leaf-file-name="DVD.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/DVD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
       <file leaf-file-name="customerFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/customerFactory.java">
@@ -260,6 +315,11 @@
       <file leaf-file-name="Material.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Material.java">
           <provider selected="true" editor-type-id="text-editor">
+=======
+      <file leaf-file-name="Material.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Material.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
             <state relative-caret-position="285">
               <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="23" />
               <folding>
@@ -310,6 +370,7 @@
         <option value="$PROJECT_DIR$/src/sample/frmReturnMaterial.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/sample/frmTakeOutMaterial.fxml" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/sample/Book.java" />
@@ -320,16 +381,21 @@
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
 =======
 >>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+=======
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6dc2e903-d21f-4456-b099-f5e00a717274/console.sql" />
         <option value="$PROJECT_DIR$/src/sample/frmCreateCustomer.java" />
         <option value="$PROJECT_DIR$/src/sample/frmCreateCustomer.fxml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4cc7f7f8-ed76-4b97-9c49-1461eadd0eba/console.sql" />
         <option value="$PROJECT_DIR$/src/sample/Customer.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/sample/FriendOfLibrary.java" />
         <option value="$PROJECT_DIR$/src/sample/Donor.java" />
         <option value="$PROJECT_DIR$/src/sample/Material.java" />
 =======
+=======
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
         <option value="$PROJECT_DIR$/src/sample/RegularCustomer.java" />
         <option value="$PROJECT_DIR$/src/sample/FriendOfLibrary.java" />
         <option value="$PROJECT_DIR$/src/sample/Donor.java" />
@@ -338,7 +404,13 @@
         <option value="$PROJECT_DIR$/src/sample/DVD.java" />
         <option value="$PROJECT_DIR$/src/sample/Book.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
+=======
+        <option value="$PROJECT_DIR$/src/sample/frmTakeOutMaterial.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/frmTakeOutMaterial.java" />
+        <option value="$PROJECT_DIR$/src/sample/Material.java" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
 =======
         <option value="$PROJECT_DIR$/src/sample/frmTakeOutMaterial.fxml" />
         <option value="$PROJECT_DIR$/src/sample/frmTakeOutMaterial.java" />
@@ -584,6 +656,7 @@
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.32746956" />
@@ -619,6 +692,8 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Application Servers" order="11" />
 =======
+=======
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -645,7 +720,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
+=======
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -877,12 +955,25 @@
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/RegularCustomer.java">
 =======
+    <entry file="file://$PROJECT_DIR$/src/sample/FriendOfLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+          </folding>
+=======
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FriendOfLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -899,42 +990,91 @@
         <state relative-caret-position="240">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/customerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="240">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+=======
+        <state relative-caret-position="105">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Donor.java">
 >>>>>>> afd12950ec1ace08e775594bf1e5f5f55f773481
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="105">
           <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/RegularCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
+=======
         <state relative-caret-position="120">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DVD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/sample/RegularCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="das://4cc7f7f8-ed76-4b97-9c49-1461eadd0eba/schema/main/table/customers">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/frmRenewMaterial.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://4cc7f7f8-ed76-4b97-9c49-1461eadd0eba/schema/main/table/sqlite_master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/CustomerDatabase">
 =======
 =======
@@ -942,18 +1082,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/frmTakeOutMaterial.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/frmCreateCustomer.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="91" lean-forward="true" selection-start-line="12" selection-start-column="91" selection-end-line="12" selection-end-column="91" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/frmRenewMaterial.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1010,6 +1170,15 @@
           <folding />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/frmGreeting.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
@@ -1024,6 +1193,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4cc7f7f8-ed76-4b97-9c49-1461eadd0eba/console.sql">
@@ -1051,24 +1221,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="68" selection-start-line="68" selection-end-line="68" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="23" />
+>>>>>>> 6409ad05e4287d48bc70f042571f74f240970fd0
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1251#1252#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#70#71#0" expanded="true" />
+            <element signature="e#98#99#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
           </folding>
 =======
     <entry file="file://$PROJECT_DIR$/src/sample/Book.java">
@@ -1104,6 +1267,14 @@
             <element signature="e#70#71#0" expanded="true" />
             <element signature="e#98#99#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/frmTakeOutMaterial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
