@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frmLoadCustomer">
+   <children>
+      <Label layoutX="129.0" layoutY="85.0" text="First Name:">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstName" layoutX="107.0" layoutY="135.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Label layoutX="159.0" layoutY="206.0" text="Last Name:">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLastName" layoutX="107.0" layoutY="261.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

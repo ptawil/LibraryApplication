@@ -96,14 +96,15 @@
       <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+            <state relative-caret-position="129">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#987#988#0" expanded="true" />
                 <element signature="e#1015#1016#0" expanded="true" />
                 <element signature="e#1057#1058#0" expanded="true" />
                 <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
                 <element signature="e#1149#1150#0" expanded="true" />
                 <element signature="e#1189#1190#0" expanded="true" />
                 <element signature="e#1221#1222#0" expanded="true" />
@@ -207,10 +208,10 @@
         <option value="$PROJECT_DIR$/src/sample/Donor.java" />
         <option value="$PROJECT_DIR$/src/sample/RegularCustomer.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6dc2e903-d21f-4456-b099-f5e00a717274/console.sql" />
-        <option value="$PROJECT_DIR$/src/sample/Customer.java" />
         <option value="$PROJECT_DIR$/src/sample/frmCreateCustomer.java" />
         <option value="$PROJECT_DIR$/src/sample/customerFactory.java" />
         <option value="$PROJECT_DIR$/src/sample/frmCreateCustomer.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Customer.java" />
       </list>
     </option>
   </component>
@@ -225,8 +226,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="90" />
-    <option name="y" value="75" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
   </component>
@@ -245,13 +245,24 @@
               <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,18 +422,20 @@
       <workItem from="1525843107155" duration="8071000" />
       <workItem from="1525965151261" duration="5226000" />
       <workItem from="1526397309358" duration="663000" />
+      <workItem from="1526567779639" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33908000" />
+    <option name="totallyTimeSpent" value="34183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="75" width="1440" height="813" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.32746956" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
@@ -434,7 +447,7 @@
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21597221" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21597221" />
       <window_info anchor="right" id="Database" order="5" visible="true" weight="0.3298611" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -443,7 +456,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="JetGradle" order="6" />
-      <window_info anchor="bottom" id="Messages" order="15" weight="0.32746956" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.42895806" />
@@ -489,6 +501,7 @@
             <element signature="e#1015#1016#0" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
             <element signature="e#1149#1150#0" expanded="true" />
             <element signature="e#1189#1190#0" expanded="true" />
             <element signature="e#1221#1222#0" expanded="true" />
@@ -531,6 +544,7 @@
             <element signature="e#1015#1016#0" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
             <element signature="e#1149#1150#0" expanded="true" />
             <element signature="e#1189#1190#0" expanded="true" />
             <element signature="e#1221#1222#0" expanded="true" />
@@ -599,6 +613,7 @@
             <element signature="e#1015#1016#0" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
             <element signature="e#1149#1150#0" expanded="true" />
             <element signature="e#1189#1190#0" expanded="true" />
             <element signature="e#1221#1222#0" expanded="true" />
@@ -930,6 +945,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/customerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/frmCreateCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -940,23 +962,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/customerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        <state relative-caret-position="129">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#987#988#0" expanded="true" />
             <element signature="e#1015#1016#0" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
             <element signature="e#1149#1150#0" expanded="true" />
             <element signature="e#1189#1190#0" expanded="true" />
             <element signature="e#1221#1222#0" expanded="true" />

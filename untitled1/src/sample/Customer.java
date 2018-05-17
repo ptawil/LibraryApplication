@@ -13,7 +13,12 @@ public abstract class Customer {
 
     public void loadCustomer(int id) {
         try {
+            Class.forName("org.sqlite.JDBD");
+        }
+        catch (ClassNotFoundException e) {
+        }
 
+        try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery("SELECT First, Last, SSN, ID, SSN From Customers Where ID =" + id);
@@ -26,7 +31,7 @@ public abstract class Customer {
 
             }
         }
-        catch (SQLException a) {
+        catch (SQLException a){
             System.out.println(a);
         }
     }
