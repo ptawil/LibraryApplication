@@ -1,6 +1,6 @@
 package sample;
 
-public class Book {
+public class Book extends Material{
     String title;
     String author;
     String dueDate;
