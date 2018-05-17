@@ -17,6 +17,7 @@ public class frmTakeOutMaterial {
     public Pane materialsAvailable;
     public ChoiceBox availableMaterials;
     public TextField ID;
+    public TextField bookTitle;
     Controller controller = new Controller();
 
     @FXML
@@ -60,5 +61,7 @@ public class frmTakeOutMaterial {
 
 
         public void takeOutMaterial(ActionEvent actionEvent) {
+            String title = bookTitle.getText();
+            Material b = new Book(title);
         }
     }
