@@ -13,6 +13,7 @@ public class frmTakeOutMaterial {
     public Pane materialsAvailable;
     public ChoiceBox availableMaterials;
     public TextField txtID;
+    public TextField txtTitle;
     Controller controller = new Controller();
 
     @FXML
@@ -45,7 +46,8 @@ public class frmTakeOutMaterial {
     }
 
     public void takeOutMaterial(ActionEvent actionEvent) {
-        String id = txtID.getText();
-        Material m = new Book(id);
+        String title = txtTitle.getText();
+        Material m = new Book(title);
+        int dueDate = m.getDueDate();
     }
 }

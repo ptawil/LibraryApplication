@@ -5,6 +5,7 @@ public class Book extends Material{
     String author;
     String dueDate;
     public Book(String id){
+        System.out.print("Created book with ID" + id);
 
     }
 }
