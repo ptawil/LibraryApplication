@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
 
-public abstract class Customer{
+public abstract class Customer implements Observable{
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -70,6 +70,8 @@ public abstract class Customer{
         this.ID = ID;
     }
 
+    public abstract String getType();
+
     int ID;
     String first, last, SSN;
 
@@ -84,5 +86,9 @@ public abstract class Customer{
         }
     }
     public abstract void renewMaterial(int materialId);
+
+    public void renewAll(){
+        notifyAll();
+    }
 
 }
