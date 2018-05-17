@@ -1,6 +1,6 @@
 package sample;
 
-public abstract class Material {
+public class Material {
     public String getTitle() {
         return title;
     }
@@ -12,13 +12,8 @@ public abstract class Material {
     String title;
     String author;
     int bookID;
-    int dueDate = 14;
 
 
     public Material(){
-    }
-
-    public int getDueDate() {
-        return dueDate;
     }
 }

@@ -8,10 +8,10 @@ public class customerFactory {
             return new RegularCustomer();
         }
         else if (item.equals("friend")) {
-            return (new FriendOfLibrary(new RegularCustomer()));
+            return new FriendOfLibrary(new RegularCustomer());
         }
         else if (item.equals("donor")) {
-            return (new Donor(new RegularCustomer()));
+            return new Donor(new RegularCustomer());
         }
         else return null;
     }

@@ -12,8 +12,7 @@ import java.util.ArrayList;
 public class frmTakeOutMaterial {
     public Pane materialsAvailable;
     public ChoiceBox availableMaterials;
-    public TextField txtID;
-    public TextField txtTitle;
+    public TextField ID;
     Controller controller = new Controller();
 
     @FXML
@@ -46,8 +45,5 @@ public class frmTakeOutMaterial {
     }
 
     public void takeOutMaterial(ActionEvent actionEvent) {
-        String title = txtTitle.getText();
-        Material m = new Book(title);
-        int dueDate = m.getDueDate();
     }
 }
