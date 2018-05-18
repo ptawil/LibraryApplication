@@ -12,7 +12,7 @@
       <Button layoutX="160.0" layoutY="187.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return to Menu" />
       <TextField fx:id="ID" layoutX="133.0" layoutY="42.0" />
       <Label layoutX="178.0" layoutY="14.0" text="Customer ID" />
-      <TextField fx:id="bookTitle" layoutX="133.0" layoutY="101.0" />
+      <TextField fx:id="materialID" layoutX="133.0" layoutY="101.0" />
       <Label layoutX="172.0" layoutY="77.0" text="Material ID" />
       <CheckBox fx:id="book" layoutX="345.0" layoutY="46.0" mnemonicParsing="false" text="Book" />
       <CheckBox fx:id="dvd" layoutX="345.0" layoutY="76.0" mnemonicParsing="false" text="DVD" />

@@ -9,8 +9,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
+import java.util.ArrayList;
 
 public abstract class Customer{
+    ArrayList<Material> materials = new ArrayList<Material>();
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -21,16 +23,15 @@ public abstract class Customer{
         }
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:CustomerDatabase.sqlite");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT First, Last, SSN, ID, SSN From Customers Where ID =" + id);
+            ResultSet rs = statement.executeQuery("SELECT customerId, firstName, lastName, ssn  From Customers Where customerId =" + id);
 
             if (rs.next()) { // there was a result
-                first = rs.getString("First");
-                last = rs.getString("Last");
-                SSN = rs.getString("SSN");
                 ID = id;
-
+                first = rs.getString("firstName");
+                last = rs.getString("lastName");
+                SSN = rs.getString("ssn");
             }
         }
         catch (SQLException a){
@@ -79,7 +80,26 @@ public abstract class Customer{
         try {
             Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
-            statement.executeQuery("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\");");
+            statement.executeUpdate("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\");");
+        }
+        catch (SQLException a) {
+            System.out.println(a);
+        }
+    }
+    public void takeOutBook(int materialID, String type){
+        Material m;
+        if (type == "Book"){
+            m = new Book();
+        }
+        else{
+            m = new DVD();
+        }
+        m.loadMaterial(materialID);
+        materials.add(m);
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            Statement statement = conn.createStatement();
+            statement.executeUpdate("UPDATE Materials SET customerId = " + getID() + " WHERE materialId = " + materialID + ";");
         }
         catch (SQLException a) {
             System.out.println(a);

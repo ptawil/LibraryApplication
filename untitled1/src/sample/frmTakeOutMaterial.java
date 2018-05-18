@@ -1,13 +1,8 @@
 package sample;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -16,12 +11,13 @@ import java.util.ArrayList;
 
 public class frmTakeOutMaterial {
     public Pane materialsAvailable;
-    public ChoiceBox availableMaterials;
     public TextField ID;
     public TextField bookTitle;
     public CheckBox book;
     public CheckBox dvd;
+    public TextField materialID;
     Controller controller = new Controller();
+    String type;
 
     @FXML
     void initialize() {
@@ -46,6 +42,24 @@ public class frmTakeOutMaterial {
             Main.getInstance().loadGreetScreen();
 
         }
+        String getTypeFromScreen(){
+            if (book.isSelected()){
+                return "Book";
+            }
+            else if(dvd.isSelected()){
+                return "DVD";
+            }
+            else{
+                return null;
+            }
+        }
+        int getMaterialID(){
+            return Integer.parseInt(ID.getText());
+        }
+        int getCustomerID(){
+            return Integer.parseInt(materialID.getText());
+        }
+
     }
 
         class Controller {
@@ -60,11 +74,27 @@ public class frmTakeOutMaterial {
                 view.loadGreetScreen();
 
             }
+            void takeOut(){
+                Material a;
+                Customer c = new RegularCustomer();
+                c.setID(view.getCustomerID());
+                c.loadCustomer(c.getID());
+                type = view.getTypeFromScreen();
+                if(type == "Book"){
+                    a = new Book();
+                }
+                else{
+                    a = new DVD();
+                }
+                int materialid = view.getMaterialID();
+                c.takeOutBook(materialid, type);
+
+
+            }
         }
 
 
         public void takeOutMaterial(ActionEvent actionEvent) {
-            String title = bookTitle.getText();
-            Material b = new Book(title);
+            controller.takeOut();
         }
     }
