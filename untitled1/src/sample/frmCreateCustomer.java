@@ -68,8 +68,10 @@ public class frmCreateCustomer {
             c.setFirst(first);
             c.setLast(last);
             c.setSSN(ssn);
-            c.setID(id++);
-            c.registerCustomer(c.getID());
+            c.setID(id);
+            id++;
+            System.out.println(id);
+            c.registerCustomer();
         }
     }
 

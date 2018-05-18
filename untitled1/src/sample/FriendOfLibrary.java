@@ -12,12 +12,23 @@ public class FriendOfLibrary extends CustomerDecorator{
 
     }
 
+    @Override
     public String getType(){
         return "friend";
     }
 
     @Override
     public void renewMaterial() {
+
+    }
+
+    @Override
+    public void addListener(InvalidationListener listener) {
+
+    }
+
+    @Override
+    public void removeListener(InvalidationListener listener) {
 
     }
 }

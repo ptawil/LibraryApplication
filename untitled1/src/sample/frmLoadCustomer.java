@@ -1,11 +1,13 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 public class frmLoadCustomer {
     public TextField txtFirstName;
     public TextField txtLastName;
+    public TextField txtId;
 
     Controller controller = new Controller();
 
@@ -14,7 +16,15 @@ public class frmLoadCustomer {
         // by writing @FXML and having an initialize method
         // I can control what happens when we first load the
         // form, namely to put up a sample customer.
-        controller.startWithSampleCustomer();
+    }
+
+    public void search(ActionEvent actionEvent) {
+        controller.loadCustomer();
+    }
+
+    public void returnToMenu(ActionEvent actionEvent) {
+        controller.menu();
+
     }
 
     class View {
@@ -22,40 +32,31 @@ public class frmLoadCustomer {
             txtFirstName.setText(customer.getFirst());
             txtLastName.setText(customer.getLast());
         }
+        int getSearchId(){
+            int id = Integer.parseInt(txtId.getText());
+            return id;
+        }
+        void loadGreetScreen() {
+            Main.getInstance().loadGreetScreen();
+
+        }
     }
 
     class Controller {
         View view = new View();
-
-        void startWithSampleCustomer() {
-            Customer c = new Customer("Jesssica", "Jones");
-            view.drawScreen(c);
+        void menu(){
+            view.loadGreetScreen();
         }
 
+        void loadCustomer(){
+            int id = view.getSearchId();
+            Customer c = new RegularCustomer();
+            c.loadCustomer(id);
+            txtFirstName.setText(c.getFirst());
+            txtLastName.setText(c.getLast());
     }
 
-    class Customer {
-        public String getFirst() {
-            return first;
-        }
 
-        public void setFirst(String first) {
-            this.first = first;
-        }
-
-        public String getLast() {
-            return last;
-        }
-
-        public void setLast(String last) {
-            this.last = last;
-        }
-
-        String first, last;
-        public Customer(String first, String last) {
-            this.first = first;
-            this.last = last;
-        }
     }
 
 }
