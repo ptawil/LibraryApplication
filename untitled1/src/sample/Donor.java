@@ -1,6 +1,8 @@
 package sample;
 
-public class Donor extends Customer{
+import javafx.beans.InvalidationListener;
+
+public class Donor extends CustomerDecorator{
     Customer c;
     public Donor(Customer c){
         this.c = c;
@@ -8,6 +10,15 @@ public class Donor extends Customer{
 
     @Override
     public void renewMaterial(int materialId) {
+
+    }
+
+    public String getType(){
+        return "donor";
+    }
+
+    @Override
+    public void renewMaterial() {
 
     }
 }

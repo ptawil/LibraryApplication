@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
 <Pane fx:id="materialsAvailable" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.frmTakeOutMaterial">
    <children>
-      <ChoiceBox fx:id="availableMaterials" layoutX="209.0" layoutY="89.0" prefWidth="150.0" />
-      <Button fx:id="takeOut" layoutX="248.0" layoutY="154.0" mnemonicParsing="false" onAction="#takeOutMaterial" text="Take Out" />
-      <TextField fx:id="ID" layoutX="203.0" layoutY="42.0" />
-      <Label layoutX="247.0" layoutY="14.0" text="Customer ID" />
-      <Button layoutX="229.0" layoutY="249.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return to Menu" />
+      <Button fx:id="takeOut" layoutX="179.0" layoutY="153.0" mnemonicParsing="false" onAction="#takeOutMaterial" text="Take Out" />
+      <Button layoutX="160.0" layoutY="187.0" mnemonicParsing="false" onAction="#returnToMenu" text="Return to Menu" />
+      <TextField fx:id="ID" layoutX="133.0" layoutY="42.0" />
+      <Label layoutX="178.0" layoutY="14.0" text="Customer ID" />
+      <TextField fx:id="bookTitle" layoutX="133.0" layoutY="101.0" />
+      <Label layoutX="172.0" layoutY="77.0" text="Material Name" />
    </children>
 </Pane>

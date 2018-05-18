@@ -1,4 +1,6 @@
 package sample;
+import javafx.beans.Observable;
+
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -8,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
 
-public abstract class Customer {
+public abstract class Customer{
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -35,7 +37,6 @@ public abstract class Customer {
             System.out.println(a);
         }
     }
-
 
     public String getFirst() {
         return first;
@@ -69,18 +70,21 @@ public abstract class Customer {
         this.ID = ID;
     }
 
+    public abstract String getType();
+
     int ID;
     String first, last, SSN;
 
-    public void registerCustomer(int id) {
+    public void registerCustomer() {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:CustomerDatabase.sqlite");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("INSERT INTO Customers(" + id + "," + getFirst() + "," + getLast() +");");
+            statement.executeQuery("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\");");
         }
         catch (SQLException a) {
             System.out.println(a);
         }
     }
     public abstract void renewMaterial(int materialId);
+
 }
