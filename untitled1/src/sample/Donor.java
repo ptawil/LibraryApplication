@@ -18,12 +18,7 @@ public class Donor extends CustomerDecorator{
     }
 
     @Override
-    public void addListener(InvalidationListener listener) {
-
-    }
-
-    @Override
-    public void removeListener(InvalidationListener listener) {
+    public void renewMaterial() {
 
     }
 }

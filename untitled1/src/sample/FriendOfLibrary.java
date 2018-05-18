@@ -15,13 +15,9 @@ public class FriendOfLibrary extends CustomerDecorator{
     public String getType(){
         return "friend";
     }
-    @Override
-    public void addListener(InvalidationListener listener) {
-
-    }
 
     @Override
-    public void removeListener(InvalidationListener listener) {
+    public void renewMaterial() {
 
     }
 }

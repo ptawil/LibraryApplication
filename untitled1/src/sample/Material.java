@@ -4,7 +4,7 @@ import javafx.beans.Observable;
 
 import java.util.Observer;
 
-public abstract class Material implements Observer{
+public abstract class Material{
     public String getTitle() {
         return title;
     }
@@ -20,19 +20,4 @@ public abstract class Material implements Observer{
     int timesRenewed = 0;
     Customer customer;
 
-
-    public Material(Observable observable){
-        observable.addListener();
-
-        if (observable instanceof Customer){
-            customer = (Customer)observable;
-        }
-    }
-
-    public void update(){
-        if (timesRenewed < 1 || customer.getType() != "regular"){
-            dueDate += 14;
-            timesRenewed++;
-        }
-    }
 }

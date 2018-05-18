@@ -5,6 +5,11 @@ public class RegularCustomer extends Customer{
 
 
     @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
     public void renewMaterial(int materialId) {
 
     }
