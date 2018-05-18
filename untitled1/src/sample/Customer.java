@@ -89,10 +89,10 @@ public abstract class Customer implements Observable{
     public void takeOutBook(int materialID, String type){
         Material m;
         if (type == "Book"){
-            m = new Book();
+            m = new Book(this);
         }
         else{
-            m = new DVD();
+            m = new DVD(this );
         }
         m.loadMaterial(materialID);
         materials.add(m);

@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -81,10 +82,10 @@ public class frmTakeOutMaterial {
                 c.loadCustomer(c.getID());
                 type = view.getTypeFromScreen();
                 if(type == "Book"){
-                    a = new Book();
+                    a = new Book((Observable) this);
                 }
                 else{
-                    a = new DVD();
+                    a = new DVD((Observable) this);
                 }
                 int materialid = view.getMaterialID();
                 c.takeOutBook(materialid, type);

@@ -16,6 +16,7 @@ public abstract class Material implements Observer{
             customer = (RegularCustomer) observable;
         }
     }
+
     public String getTitle() {
         return title;
     }
