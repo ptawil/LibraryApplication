@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -18,6 +19,8 @@ public class frmTakeOutMaterial {
     public ChoiceBox availableMaterials;
     public TextField ID;
     public TextField bookTitle;
+    public CheckBox book;
+    public CheckBox dvd;
     Controller controller = new Controller();
 
     @FXML
