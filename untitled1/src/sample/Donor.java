@@ -12,13 +12,23 @@ public class Donor extends CustomerDecorator{
     public void renewMaterial(int materialId) {
 
     }
-
+    @Override
     public String getType(){
         return "donor";
     }
 
     @Override
     public void renewMaterial() {
+
+    }
+
+    @Override
+    public void addListener(InvalidationListener listener) {
+
+    }
+
+    @Override
+    public void removeListener(InvalidationListener listener) {
 
     }
 }

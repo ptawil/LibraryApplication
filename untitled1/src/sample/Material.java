@@ -1,11 +1,22 @@
 package sample;
 
+import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 
 import java.sql.*;
 import java.util.Observer;
 
-public abstract class Material{
+public abstract class Material implements Observer{
+    RegularCustomer customer;
+
+    public Material(Observable observable){
+        observable.addListener((InvalidationListener) this);
+
+        if (observable instanceof RegularCustomer){
+            customer = (RegularCustomer) observable;
+        }
+    }
+
     public String getTitle() {
         return title;
     }
@@ -50,9 +61,8 @@ public abstract class Material{
 
     String author;
     int bookID;
-    int dueDate = 14;
+    int dueDate = 14; // days
     int timesRenewed = 0;
-    Customer customer;
 
     public void loadMaterial(int materialid) {
         try {
@@ -72,4 +82,9 @@ public abstract class Material{
         }
     }
 
+    public void update() {
+        if (timesRenewed < 1 || customer.getType() != "regular") {
+            dueDate += 14;
+        }
+    }
 }

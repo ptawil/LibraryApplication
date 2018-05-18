@@ -11,7 +11,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.DatabaseMetaData;
 import java.util.ArrayList;
 
-public abstract class Customer{
+public abstract class Customer implements Observable{
     ArrayList<Material> materials = new ArrayList<Material>();
     public Customer() {}
 
@@ -89,10 +89,10 @@ public abstract class Customer{
     public void takeOutBook(int materialID, String type){
         Material m;
         if (type == "Book"){
-            m = new Book();
+            m = new Book(this);
         }
         else{
-            m = new DVD();
+            m = new DVD(this );
         }
         m.loadMaterial(materialID);
         materials.add(m);
@@ -106,5 +106,7 @@ public abstract class Customer{
         }
     }
     public abstract void renewMaterial(int materialId);
-
+    public void renewAll(){
+        notifyAll();
+    }
 }
