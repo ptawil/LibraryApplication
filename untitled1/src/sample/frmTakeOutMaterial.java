@@ -19,13 +19,13 @@ public class frmTakeOutMaterial {
     public TextField materialID;
     Controller controller = new Controller();
     String type;
+    customerFactory cf = new customerFactory();
 
     @FXML
     void initialize() {
         // by writing @FXML and having an initialize method
         // I can control what happens when we first load the
         // form, namely to put up a sample customer.
-        controller.displayBooks();
     }
 
     public void returnToMenu(ActionEvent actionEvent) {
@@ -33,11 +33,7 @@ public class frmTakeOutMaterial {
     }
 
     class View {
-        void drawScreen(ArrayList<Material> available) {
 
-        }
-
-        Stage primaryStage;
 
         void loadGreetScreen() {
             Main.getInstance().loadGreetScreen();
@@ -67,26 +63,18 @@ public class frmTakeOutMaterial {
 
             View view = new View();
 
-            void displayBooks() {
-
-            }
 
             void menu() {
                 view.loadGreetScreen();
 
             }
             void takeOut(){
-                Material a;
                 Customer c = new RegularCustomer();
-                c.setID(view.getCustomerID());
+                c.loadCustomer(view.getCustomerID());
+                String customerType = c.getType();
+                c = cf.createCustomer(customerType);
                 c.loadCustomer(c.getID());
                 type = view.getTypeFromScreen();
-                if(type == "Book"){
-                    a = new Book((Observable) this);
-                }
-                else{
-                    a = new DVD((Observable) this);
-                }
                 int materialid = view.getMaterialID();
                 c.takeOutBook(materialid, type);
 

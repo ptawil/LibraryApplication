@@ -37,6 +37,10 @@ public class frmCreateCustomer {
 
     }
 
+    public void returnToMenu(ActionEvent actionEvent) {
+        controller.menu();
+    }
+
     class View {
         void drawScreen(Customer customer) {
             txtFirstName.setText(customer.getFirst());
@@ -56,6 +60,9 @@ public class frmCreateCustomer {
                 return "invalid";
             }
         }
+        void loadGreetScreen(){
+            Main.getInstance().loadGreetScreen();
+        }
     }
 
     class Controller {
@@ -70,8 +77,10 @@ public class frmCreateCustomer {
             c.setSSN(ssn);
             c.setID(id);
             id++;
-            System.out.println(id);
             c.registerCustomer();
+        }
+        void menu(){
+            view.loadGreetScreen();
         }
     }
 

@@ -13,7 +13,6 @@ public class frmReturnMaterial {
         // by writing @FXML and having an initialize method
         // I can control what happens when we first load the
         // form, namely to put up a sample customer.
-        controller.displayBooks();
     }
 
     public void returnToMenu(ActionEvent actionEvent) {
@@ -21,9 +20,7 @@ public class frmReturnMaterial {
     }
 
     class View {
-        void drawScreen(ArrayList<Material> available) {
 
-        }
 
 
         void loadGreetScreen() {
@@ -36,9 +33,7 @@ public class frmReturnMaterial {
 
         View view = new View();
 
-        void displayBooks() {
 
-        }
 
         void menu() {
             view.loadGreetScreen();

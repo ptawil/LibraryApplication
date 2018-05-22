@@ -10,12 +10,9 @@ public abstract class Material implements Observer{
     RegularCustomer customer;
 
     public Material(Observable observable){
-        observable.addListener((InvalidationListener) this);
-
-        if (observable instanceof RegularCustomer){
-            customer = (RegularCustomer) observable;
-        }
+        observable.addObserver(this);
     }
+
 
     public String getTitle() {
         return title;
