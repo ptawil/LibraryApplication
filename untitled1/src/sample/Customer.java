@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public abstract class Customer extends Observable{
+public abstract class Customer implements Observable{
     ArrayList<Material> materials = new ArrayList<Material>();
     public int timesRenewed = 0;
 
@@ -146,6 +146,20 @@ public abstract class Customer extends Observable{
     }
     public abstract void renewMaterial(int materialId);
     public void renewAll(){
-        notifyObservers();
+        notifyAll();
+    }
+
+    public void addObserver(Observer o){
+        materials.add((Material)o);
+    }
+
+    public void removeObserver(Observer o){
+        materials.remove(o);
+    }
+
+    public void notifyObservers(){
+        for (Material observer:materials){  // loop through and call update
+            observer.update();
+        }
     }
 }
