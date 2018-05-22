@@ -9,8 +9,8 @@ import java.util.Observer;
 public abstract class Material implements Observer{
     RegularCustomer customer;
 
-    public Material(Observable observable){
-        observable.addObserver(this);
+    public Material(Customer customer){
+        customer.addObserver((sample.Observer) this);
     }
 
 

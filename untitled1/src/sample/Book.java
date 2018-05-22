@@ -8,7 +8,7 @@ public class Book extends Material{
     String dueDate;
 
     public Book(javafx.beans.Observable observable) {
-        super(observable);
+        super((Customer) observable);
     }
 
     @Override

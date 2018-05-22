@@ -7,7 +7,7 @@ public class DVD extends Material{
     String director;
 
     public DVD(javafx.beans.Observable observable) {
-        super(observable);
+        super((Customer) observable);
     }
 
     @Override
