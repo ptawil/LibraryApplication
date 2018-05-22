@@ -15,31 +15,36 @@ import java.util.ArrayList;
 
 public class frmRenewMaterial {
     public Pane materialsAvailable;
-    public ChoiceBox availableMaterials;
-    public TextField ID;
+    public TextField customerID;
+    public TextField materialID;
     Controller controller = new Controller();
+    customerFactory cf = new customerFactory();
 
     @FXML
     void initialize() {
         // by writing @FXML and having an initialize method
         // I can control what happens when we first load the
         // form, namely to put up a sample customer.
-        controller.displayBooks();
     }
 
     public void returnToMenu(ActionEvent actionEvent) {
         controller.menu();
     }
 
+    public void renewMaterial(ActionEvent actionEvent) {
+        controller.renewMaterial();
+    }
+
     class View {
-        void drawScreen(ArrayList<Material> available) {
-
-        }
-
 
         void loadGreetScreen() {
             Main.getInstance().loadGreetScreen();
-
+        }
+        int getCustomerId(){
+            return Integer.parseInt(customerID.getText());
+        }
+        int getMaterialId(){
+            return Integer.parseInt(materialID.getText());
         }
     }
 
@@ -47,13 +52,18 @@ public class frmRenewMaterial {
 
         View view = new View();
 
-        void displayBooks() {
-
-        }
 
         void menu() {
             view.loadGreetScreen();
 
+        }
+        void renewMaterial(){
+            Customer c = new RegularCustomer();
+            c.loadCustomer(view.getCustomerId());
+            String type = c.getType();
+            c = cf.createCustomer(type);
+            c.loadCustomer(view.getCustomerId());
+            c.renewMaterial(view.getMaterialId());
         }
     }
 }

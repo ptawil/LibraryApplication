@@ -18,5 +18,6 @@
       <CheckBox fx:id="regular" layoutX="149.0" layoutY="242.0" mnemonicParsing="false" text="Regular" />
       <CheckBox fx:id="donor" layoutX="151.0" layoutY="267.0" mnemonicParsing="false" text="Donor " />
       <CheckBox fx:id="friend" layoutX="149.0" layoutY="291.0" mnemonicParsing="false" text="Friend of Library" />
+      <Button mnemonicParsing="false" onAction="#returnToMenu" text="Return to Menu" />
    </children>
 </Pane>

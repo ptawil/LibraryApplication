@@ -1,18 +1,24 @@
 package sample;
 import javafx.beans.Observable;
 
-import java.sql.*;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.ResultSetMetaData;
-import java.sql.DatabaseMetaData;
 import java.util.ArrayList;
 
-public abstract class Customer implements Observable{
+public abstract class Customer extends Observable{
     ArrayList<Material> materials = new ArrayList<Material>();
+    public int timesRenewed = 0;
+
+    public int getTimesAllowed() {
+        return timesAllowed;
+    }
+
+    public int timesAllowed = 2;
+    Connection conn;
+
     public Customer() {}
 
     public void loadCustomer(int id) {
@@ -23,16 +29,18 @@ public abstract class Customer implements Observable{
         }
 
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT customerId, firstName, lastName, ssn  From Customers Where customerId =" + id);
+            ResultSet rs = statement.executeQuery("SELECT customerId, firstName, lastName, ssn, type  From Customers Where customerId =" + id);
 
             if (rs.next()) { // there was a result
                 ID = id;
                 first = rs.getString("firstName");
                 last = rs.getString("lastName");
                 SSN = rs.getString("ssn");
+                type = rs.getString("type");
             }
+            conn.close();
         }
         catch (SQLException a){
             System.out.println(a);
@@ -70,17 +78,20 @@ public abstract class Customer implements Observable{
     public void setID(int ID) {
         this.ID = ID;
     }
+    public String getType(){
+        return type;
+    }
 
-    public abstract String getType();
 
     int ID;
-    String first, last, SSN;
+    String first, last, SSN, type;
 
     public void registerCustomer() {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
-            statement.executeUpdate("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\");");
+            statement.executeUpdate("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\",\"" + getType() + "\");");
+            conn.close();
         }
         catch (SQLException a) {
             System.out.println(a);
@@ -88,7 +99,7 @@ public abstract class Customer implements Observable{
     }
     public void takeOutBook(int materialID, String type){
         Material m;
-        if (type == "Book"){
+        if (type.equals("Book")){
             m = new Book(this);
         }
         else{
@@ -97,13 +108,41 @@ public abstract class Customer implements Observable{
         m.loadMaterial(materialID);
         materials.add(m);
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
             Statement statement = conn.createStatement();
             statement.executeUpdate("UPDATE Materials SET customerId = " + getID() + " WHERE materialId = " + materialID + ";");
+            conn.close();
         }
         catch (SQLException a) {
             System.out.println(a);
         }
+    }
+    public void getTakenOutBooks(int customerId) {
+        try {
+            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            Statement statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT materialId, typeOfMaterial from Materials WHERE customerId = " + customerId + ";");
+            while (rs.next()) { // there was a result
+                ID = customerId;
+                int materialId = Integer.parseInt(rs.getString("materialId"));
+                String typeOfMaterial = rs.getString("typeOfMaterial");
+                Material m;
+                if (typeOfMaterial.equals("Book")) {
+                    m = new Book(this);
+                } else {
+                    m = new DVD(this);
+                }
+                m.loadMaterial(materialId);
+                materials.add(m);
+            }
+            conn.close();
+
+        } catch (SQLException a) {
+            System.out.println(a);
+        }
+    }
+    public ArrayList<Material> getCheckedOutMaterials(){
+            return materials;
     }
     public abstract void renewMaterial(int materialId);
     public void renewAll(){

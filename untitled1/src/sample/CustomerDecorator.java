@@ -1,6 +1,8 @@
 package sample;
 
+import javafx.beans.InvalidationListener;
+
 public abstract class CustomerDecorator extends Customer{
-    public abstract void renewMaterial();
+    public abstract String getType();
 }
 
