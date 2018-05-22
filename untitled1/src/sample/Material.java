@@ -4,13 +4,12 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 
 import java.sql.*;
-import java.util.Observer;
 
 public abstract class Material implements Observer{
     RegularCustomer customer;
 
     public Material(Customer customer){
-        customer.addObserver((sample.Observer) this);
+        customer.addObserver(this);
     }
 
 
@@ -81,7 +80,7 @@ public abstract class Material implements Observer{
 
     public void update() {
         if (timesRenewed < 1 || customer.getType() != "regular") {
-            dueDate += 14;
+            customer.renewMaterial(this.bookID);
         }
     }
 }

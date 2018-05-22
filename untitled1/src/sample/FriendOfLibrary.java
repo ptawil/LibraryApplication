@@ -14,13 +14,13 @@ public class FriendOfLibrary extends CustomerDecorator{
     }
     @Override
     public void renewMaterial(int materialId){
+
         if (timesRenewed < c.getTimesAllowed() + 2) {
+            timesRenewed++;
             try {
-                conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-                Statement statement = conn.createStatement();
+                Statement statement = getConn().createStatement();
                 statement.executeUpdate("UPDATE Materials SET dueDate = dueDate + 14 WHERE materialId = " + materialId + ";");
-                timesRenewed++;
-                conn.close();
+
             }
             catch (SQLException a) {
                 System.out.println(a);
@@ -35,14 +35,5 @@ public class FriendOfLibrary extends CustomerDecorator{
     }
 
 
-    @Override
-    public void addListener(InvalidationListener listener) {
-
-    }
-
-    @Override
-    public void removeListener(InvalidationListener listener) {
-
-    }
 
 }

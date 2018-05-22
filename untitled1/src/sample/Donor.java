@@ -18,11 +18,9 @@ public class Donor extends CustomerDecorator{
         if (timesRenewed < c.getTimesAllowed() + 4) {
 
             try {
-                conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-                Statement statement = conn.createStatement();
+                Statement statement = getConn().createStatement();
                 statement.executeUpdate("UPDATE Materials SET dueDate = dueDate + 14 WHERE materialId = " + materialId + ";");
                 timesRenewed++;
-                conn.close();
             }
             catch (SQLException a) {
                 System.out.println(a);
@@ -38,15 +36,4 @@ public class Donor extends CustomerDecorator{
     }
 
 
-
-
-    @Override
-    public void addListener(InvalidationListener listener) {
-
-    }
-
-    @Override
-    public void removeListener(InvalidationListener listener) {
-
-    }
 }

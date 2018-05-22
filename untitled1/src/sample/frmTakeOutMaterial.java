@@ -73,6 +73,7 @@ public class frmTakeOutMaterial {
                 c.loadCustomer(view.getCustomerID());
                 String customerType = c.getType();
                 c = cf.createCustomer(customerType);
+                c.setID(view.getCustomerID());
                 c.loadCustomer(c.getID());
                 type = view.getTypeFromScreen();
                 int materialid = view.getMaterialID();

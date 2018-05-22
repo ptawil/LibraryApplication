@@ -1,5 +1,4 @@
 package sample;
-import javafx.beans.Observable;
 
 import java.sql.Connection;
 import java.sql.Statement;
@@ -17,9 +16,23 @@ public abstract class Customer implements Observable{
     }
 
     public int timesAllowed = 2;
-    Connection conn;
 
     public Customer() {}
+    protected static Connection c = null;
+    public static Connection getConn(){
+        if(c == null) {
+            try {
+                Class.forName("org.sqlite.JDBC");
+                c = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
+            }
+            catch (SQLException a){
+                System.out.println(a);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        return c;
+    }
 
     public void loadCustomer(int id) {
         try {
@@ -29,8 +42,7 @@ public abstract class Customer implements Observable{
         }
 
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-            Statement statement = conn.createStatement();
+            Statement statement = getConn().createStatement();
             ResultSet rs = statement.executeQuery("SELECT customerId, firstName, lastName, ssn, type  From Customers Where customerId =" + id);
 
             if (rs.next()) { // there was a result
@@ -40,7 +52,7 @@ public abstract class Customer implements Observable{
                 SSN = rs.getString("ssn");
                 type = rs.getString("type");
             }
-            conn.close();
+
         }
         catch (SQLException a){
             System.out.println(a);
@@ -88,10 +100,9 @@ public abstract class Customer implements Observable{
 
     public void registerCustomer() {
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-            Statement statement = conn.createStatement();
+            Statement statement = getConn().createStatement();
             statement.executeUpdate("INSERT INTO Customers VALUES(" + getID() + ",\"" + getFirst() + "\",\"" + getLast() + "\",\"" + getSSN() + "\",\"" + getType() + "\");");
-            conn.close();
+
         }
         catch (SQLException a) {
             System.out.println(a);
@@ -105,13 +116,20 @@ public abstract class Customer implements Observable{
         else{
             m = new DVD(this );
         }
-        m.loadMaterial(materialID);
-        materials.add(m);
+        //m.loadMaterial(materialID);
+        //materials.add(m);
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-            Statement statement = conn.createStatement();
+            Statement statement = getConn().createStatement();
             statement.executeUpdate("UPDATE Materials SET customerId = " + getID() + " WHERE materialId = " + materialID + ";");
-            conn.close();
+        }
+        catch (SQLException a) {
+            System.out.println(a);
+        }
+    }
+    public void returnBook(int materialID){
+        try {
+            Statement statement = getConn().createStatement();
+            statement.executeUpdate("UPDATE Materials SET customerId = 0  WHERE materialId = " + materialID + ";");
         }
         catch (SQLException a) {
             System.out.println(a);
@@ -119,8 +137,7 @@ public abstract class Customer implements Observable{
     }
     public void getTakenOutBooks(int customerId) {
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-            Statement statement = conn.createStatement();
+            Statement statement = getConn().createStatement();
             ResultSet rs = statement.executeQuery("SELECT materialId, typeOfMaterial from Materials WHERE customerId = " + customerId + ";");
             while (rs.next()) { // there was a result
                 ID = customerId;
@@ -135,7 +152,6 @@ public abstract class Customer implements Observable{
                 m.loadMaterial(materialId);
                 materials.add(m);
             }
-            conn.close();
 
         } catch (SQLException a) {
             System.out.println(a);

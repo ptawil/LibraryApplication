@@ -19,10 +19,9 @@ public class RegularCustomer extends Customer {
         if (timesRenewed < timesAllowed) {
             timesRenewed++;
             try {
-                conn = DriverManager.getConnection("jdbc:sqlite:/Applications/IntelliJ IDEA.app/Contents/bin/CustomerDatabase.sqlite");
-                Statement statement = conn.createStatement();
+                Statement statement = getConn().createStatement();
                 statement.executeUpdate("UPDATE Materials SET dueDate = dueDate + 14 WHERE materialId = " + materialId + ";");
-                conn.close();
+
             } catch (SQLException a) {
                 System.out.println(a);
 
@@ -31,13 +30,4 @@ public class RegularCustomer extends Customer {
         }
     }
 
-    @Override
-    public void addListener(InvalidationListener listener) {
-
-    }
-
-    @Override
-    public void removeListener(InvalidationListener listener) {
-
-    }
 }

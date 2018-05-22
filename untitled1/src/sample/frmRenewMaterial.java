@@ -26,7 +26,6 @@ public class frmRenewMaterial {
         // I can control what happens when we first load the
         // form, namely to put up a sample customer.
     }
-
     public void returnToMenu(ActionEvent actionEvent) {
         controller.menu();
     }
@@ -51,19 +50,18 @@ public class frmRenewMaterial {
     class Controller {
 
         View view = new View();
-
-
         void menu() {
             view.loadGreetScreen();
 
         }
-        void renewMaterial(){
-            Customer c = new RegularCustomer();
-            c.loadCustomer(view.getCustomerId());
-            String type = c.getType();
-            c = cf.createCustomer(type);
-            c.loadCustomer(view.getCustomerId());
-            c.renewMaterial(view.getMaterialId());
+
+        void renewMaterial() {
+                Customer c = new RegularCustomer();
+                c.loadCustomer(view.getCustomerId());
+                String type = c.getType();
+                c = cf.createCustomer(type);
+                c.loadCustomer(view.getCustomerId());
+                c.renewMaterial(view.getMaterialId());
         }
     }
 }
